@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   body{
+        background-color: grey;
+        font:4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    p{
+        margin: 4rem;
+        
+    }
+
+    input{
+        background-color: blue;
+        margin: 4rem;
+        color: red;
+        padding: 1rem;
+        font:1rem
+       
+    }
+</style>
+<script type="text/javascript">
+    function Confirmation(){
+        let Val=confirm("Do you want to Continue?");
+        if(Val==true){
+            document.write("NOT CONTINUED");
+            return true;
+
+        }
+        else{
+            document.write("NOT CONTINUED")
+            return false;
+        }
+    }
+</script>
+<body>
+    <p>Click Me</p>
+    <form action="">
+        <input type="button" value="Click Me" onclick="Confirmation()">
+
+    </form>
+</body>
+</html>
