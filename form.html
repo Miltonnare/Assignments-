@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <style>
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            color:violet
+        }
+        input,button{
+           margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="">
+        <input type="text" id="inputter" placeholder="Enter the Code">
+
+        <button type="button" onclick="Updater()">CLICK</button>
+    </form>
+    
+    <script type="text/javascript">
+
+        function Updater(){
+        const Inputter=document.getElementById("inputter").value;
+
+        if (Inputter=="SIT300"){
+            alert("SUCCESFULL");
+            console.log("SUCCESFULL")
+        }
+        else{
+            alert("FAILED");
+            console.log("FAILED")
+        }
+    }
+    </script>
+</body>
+</html>
