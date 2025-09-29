@@ -8,8 +8,5 @@ def largest():
             indexOne=i
     return indexOne
      
-    
-    
-
 print("Largest number is:",largest())
 
