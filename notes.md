@@ -36,3 +36,17 @@ if (weather === "rainy") {
 } else {
     console.log("Stay inside");
 }
+
+
+Iterations/Loops
+For Loop
+While Loop 
+Do while Loop
+
+
+for (let i = 0; i < 5; i++) {
+    console.log("Clap");
+}
+
+for i in range(5):
+    print("Clap")
