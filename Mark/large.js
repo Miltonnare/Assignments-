@@ -6,8 +6,8 @@ function findLargest(){
 
     for (let i=1;i<array.length;i++){
 
-        if(array[i]>largerst){
-             largerst=array[i];
+ if(array[i]>largerst){
+largerst=array[i];
 
              
         }
@@ -20,4 +20,6 @@ function findLargest(){
 }
 
 console.log("The Result: ",findLargest());
+
+// This is a jaascript comment
 
