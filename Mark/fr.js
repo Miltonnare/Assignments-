@@ -1,8 +1,24 @@
-// a loop that print
+
+const age=30;
+console.log(age);
+
+age=34;
 
 
+let Candy=true;
+
+if(Candy){
+    console.log("Eat it");
+}
+else{
+    console.log("Ask Mom");
+}
 
 
-for (let i=1;i<6;i++)
+let isRaining = true;
 
-{console.log('I like coding')}
+if (isRaining) {
+    console.log("Take an umbrella");
+} else {
+    console.log("Wear sunglasses");
+}
