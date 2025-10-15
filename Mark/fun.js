@@ -27,23 +27,23 @@ Add(8,20);
 Add(50,7);
 
 
-// function Add(a,b){
+function Add(a,b){
     
-//     return a+b;
+    return a+b;
 
-// }
+}
 
-//  console.log("The result is",Add(5,6));
-
-
-//  let a=10;
-//  let b=20;
-//  let result=a+b;
-
-//  console.log(result)
+ console.log("The result is",Add(5,6));
 
 
-//  a=50;
-//  b=7;
+ let a=10;
+ let b=20;
+ let result=a+b;
 
-//  console.log(result);
+ console.log(result)
+
+
+ a=50;
+ b=7;
+
+ console.log(result);
