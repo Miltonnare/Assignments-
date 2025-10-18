@@ -47,3 +47,12 @@ function Add(a,b){
  b=7;
 
  console.log(result);
+
+ function DiV(a,b){
+
+    if (b==0){
+        
+    }
+    return a/b;
+
+ }
