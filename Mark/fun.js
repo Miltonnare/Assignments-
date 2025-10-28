@@ -1,58 +1,17 @@
-num3=56
+let waether ="snowy";
 
-function Add(){
+if (weather==="rainy")
 
-    let a=4;
-    let b=20
-    result=a+b;
+   { console.log("take an unmbrella");}
 
-    console.log(result);
-
-    // code executed
-}
-
-
-Add();
-
-function Add(a,b){
-    result=a+b;
-    console.log(result);
-}
-
-Add(20,9);
-
-Add(89,10);
-
-Add(8,20);
-Add(50,7);
-
-
-function Add(a,b){
+    else if(weather==="sunny")
     
-    return a+b;
+    {console.log ("swear sunglass");}
 
-}
+    else if(weather==="snowy")
 
- console.log("The result is",Add(5,6));
+    {console.log("wear a coat");}
 
-
- let a=10;
- let b=20;
- let result=a+b;
-
- console.log(result)
-
-
- a=50;
- b=7;
-
- console.log(result);
-
- function DiV(a,b){
-
-    if (b==0){
+else
         
-    }
-    return a/b;
-
- }
+        {console.log ("stay inside");}
