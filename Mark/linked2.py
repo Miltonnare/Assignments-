@@ -19,3 +19,6 @@ class LinkedList:
             temp=temp.next
         
         temp.next=new_node
+    
+    def insert_at_position(self,data,pos):
+        new_node=Node(data)
