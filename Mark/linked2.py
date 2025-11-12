@@ -22,3 +22,4 @@ class LinkedList:
     
     def insert_at_position(self,data,pos):
         new_node=Node(data)
+        self.head=new_node
