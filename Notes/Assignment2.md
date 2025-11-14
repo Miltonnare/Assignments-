@@ -40,6 +40,8 @@ The Web is scalable, meaning it can efficiently handle exponential growth in use
 🚀 Example: Cloud-Based Web Applications
 Real-World Scenario: E-commerce Platform During Black Friday
 
+Expalin in details
+
 
 
 
