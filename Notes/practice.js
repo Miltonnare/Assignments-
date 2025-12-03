@@ -53,3 +53,9 @@ let i=5;
 while(i<4){
     console.log("I love You!");
 }
+
+
+let Y=5;
+X=+Y;
+
+console.log(X);
