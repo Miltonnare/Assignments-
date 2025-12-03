@@ -1,6 +1,19 @@
 
 <?php
 
+$serveName="localhost";
+$passworsd="";
+$username="";
+
+$conn=new mysqli($serveName,$passworsd,$username);
+
+if($conn->connect_error){
+    die("Connection failed:" . $conn->connect_error);
+}
+
+echo "succesfully connected";
+
+
 $array=[70,68,78,90,56];
 
 foreach ($array as $index){
