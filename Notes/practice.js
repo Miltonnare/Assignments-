@@ -59,3 +59,11 @@ let Y=5;
 X=+Y;
 
 console.log(X);
+
+
+for (let i = 1; i < 10; i++) {
+  if (i === 3) {
+     continue;
+     }
+  console.log("The number is " ,i);
+}
