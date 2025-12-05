@@ -19,7 +19,7 @@ echo "Accessing the 2nd Elements directly: \n";
 echo $name_two[2],"\n";
 echo $name_two[0],"\n";
 echo $name_two[4],"\n";
-
+echo $name_two[4],"\n";
 
 
 
