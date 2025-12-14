@@ -43,3 +43,6 @@ async function main(){
 }
 
 main()
+
+
+// This code is meant to help unerstand the Session
