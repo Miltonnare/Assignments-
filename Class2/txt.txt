@@ -1,0 +1,48 @@
+
+let
+const
+ 
+ let name=Mike;
+ const name=Mike;
+
+name=Joseph;
+
+///Python
+name=Mike
+color=Blue
+
+Integer  Boolearn Decimal float Number
+
+float---3.142
+integer---3
+string--mike
+char---c
+
+let name="Mike";
+
+let age=5;
+
+Operators
+
++,-,/,*---Arithmetic Operators
+=,----Assignment
+<,>,<=,>=,==,===---Comparison operators
+AND, OR---|| ,&----Logical operators
+
+
+let name="David";
+
+name="David";
+
+for(let i=0;i>10;i++){
+    console.log("Javascript loops");
+}
+
+favorite_color="blue"
+
+let favorite_colro="blue";
+
+
+
+
+
