@@ -14,5 +14,7 @@ elif weather == "sunny":
     print("Wear sunglasses")
 elif weather == "snowy":
     print("Wear a coat")
+elif weather =="windy":
+    print("Wear a Coat")
 else:
     print("Stay inside")
