@@ -3,4 +3,4 @@
 
 ## Ranging from php ,JavaScript,Python,java
 
-Enables grabbing of Knowledge from different facets and frameworks
+Enables grabbing of Knowledge from different facets and frameworks such as Laravel
