@@ -5,4 +5,4 @@
 
 Enables grabbing of Knowledge from different facets and frameworks such as Laravel
 
-Both Frontend and Backend
+Both Frontend and Backend ##Forward and Backward Chaining
