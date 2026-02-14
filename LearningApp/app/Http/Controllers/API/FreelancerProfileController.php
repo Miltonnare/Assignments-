@@ -12,10 +12,13 @@ class FreelancerProfileController extends Controller
     public function show(): JsonResponse
     {
         $user = auth()->user()->load('freelancerProfile');
+        $profile = $user->freelancerProfile;
 
-        return response()->json(
-            new FreelancerProfileResource($user->freelancerProfile)
-        );
+        if (! $profile) {
+            return response()->json(['data' => null], 200);
+        }
+
+        return response()->json(new FreelancerProfileResource($profile));
     }
 
     public function storeOrUpdate(StoreUpdateRequest $request): JsonResponse
