@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Order\StoreRequest;
-use App\Http\Resources\OrderResource;
 use App\Models\Order;
 use App\Models\Service;
 use App\Services\OrderService;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -17,7 +14,10 @@ class OrderController extends Controller
     {
     }
 
-    public function index(Request $request): JsonResponse
+    /**
+     * Display a listing of orders.
+     */
+    public function index(Request $request)
     {
         $user = $request->user();
 
@@ -30,37 +30,42 @@ class OrderController extends Controller
             });
         }
 
-        $orders = $query->latest()->paginate($request->get('per_page', 15));
+        $orders = $query->latest()->paginate(15);
 
-        return response()->json(
-            OrderResource::collection($orders)->response()->getData(true)
-        );
+        return view('orders.index', compact('orders'));
     }
 
-    public function show(Request $request, Order $order): JsonResponse
+    /**
+     * Display the specified order.
+     */
+    public function show(Request $request, Order $order)
     {
         $this->authorize('view', $order);
 
         $order->load(['service', 'client', 'freelancer', 'review']);
 
-        return response()->json(new OrderResource($order));
+        return view('orders.show', compact('order'));
     }
 
-    public function store(StoreRequest $request): JsonResponse
+    /**
+     * Store a newly created order.
+     */
+    public function store(StoreRequest $request, Service $service)
     {
-        $service = Service::findOrFail($request->validated()['service_id']);
-
         $order = $this->orderService->createOrder(
             $request->user(),
             $service
         );
 
-        $order->load(['service', 'client', 'freelancer']);
-
-        return response()->json(new OrderResource($order), 201);
+        return redirect()
+            ->route('orders.show', $order)
+            ->with('success', 'Order created successfully');
     }
 
-    public function updateStatus(Request $request, Order $order): JsonResponse
+    /**
+     * Update the order status.
+     */
+    public function updateStatus(Request $request, Order $order)
     {
         $this->authorize('updateStatus', $order);
 
@@ -69,9 +74,9 @@ class OrderController extends Controller
         ]);
 
         $order->update(['status' => $validated['status']]);
-        $order->load(['service', 'client', 'freelancer', 'review']);
 
-        return response()->json(new OrderResource($order));
+        return redirect()
+            ->route('orders.show', $order)
+            ->with('success', 'Order status updated successfully');
     }
 }
-
