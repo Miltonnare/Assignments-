@@ -57,6 +57,13 @@ class OrderController extends Controller
             $service
         );
 
+        // If accessed from client dashboard, redirect back to dashboard
+        if ($request->user()->isClient()) {
+            return redirect()
+                ->route('dashboard')
+                ->with('success', 'Service requested successfully! Your order has been placed.');
+        }
+
         return redirect()
             ->route('orders.show', $order)
             ->with('success', 'Order created successfully');
